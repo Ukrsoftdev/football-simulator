@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/game/simulate/season', '\App\Http\Controllers\ApiJson\SimulatorController@simulateSeason');
+Route::post('/game/simulate/playoff', '\App\Http\Controllers\ApiJson\SimulatorController@simulatePlayoff');
